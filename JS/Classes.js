@@ -1,19 +1,54 @@
-
-class warzywa
+class warzywka
 {
-    Name = "empty";
-    Price = 0.00;
-    Stock = 0;
+    this.Name[] = "empty";
+    this.Price[] = 0.00;
+    this.Stock[] = 0;
 }
 
-let warzywo = new Array(2);
-for(let i=0;i<3;i++)
+Questions = function()
 {
-    warzywo[i] = new warzywa;
-    warzywo[i].Name = prompt('Podaj nazwe warzywa: ');
-    warzywo[i].Price = prompt('Podaj cene warzywa');
-    warzywo[i].Stock = prompt('Podaj ilosc warzywa w magazynie');
+    for(let i=0;i<3;i++)
+    {
+        this.Name[i] = prompt(' Whats the name of the vegetable? ');
+        this.Price[i] = +prompt(' Whats the price of the vegetable? ');
+        this.Stock[i] = +prompt(' How many in stock? ');
+    }
+
 }
+
+Doer = function()
+{
+    warzywka.Questions();
+    alert("you have chosen: " +this.Name+ " <br> ");
+    let choose = prompt('a - by amount, p - by price')
+    if(choose === a)
+    {
+        this.AmountA = +prompt('How many things you want?');
+        for(let i=0;i<3;i++)
+        {
+            if (AmountA >=this.Amount[i])
+            {
+            document.write('We have: ' +this.Name[i]+ ' in the amount of: ' +this.Amount[i]+ 'and the price: ' +this.price[i]+ '<br>' );
+            }
+        }
+    }
+    else if(choose === p)
+    {
+        this.PriceA = +prompt('How much you want to spend?');
+        for(let i=0;i<3;i++)
+        {
+            if (PriceA >=this.Price[i])
+            {
+                document.write('We have: ' +this.Name[i]+ ' in the amount of: ' +this.Amount[i]+ 'and the price: ' +this.price[i]+ '<br>' );
+            }
+        }
+    }
+}
+Display = function()
+{
+warzywka.Doer();
+}
+/*
 /*
 for(let i=0;i<3;i++)
 {
@@ -30,7 +65,7 @@ for(let i=0;i<3;i++)
         document.write('Warzywa o cenie mniejszej niz 5 to:'+warzywo[i].Name+ ' , ');
 }
 */
-
+/*
 let answer = prompt("Cena Czy ilosc dostepnych warzyw");
 if(answer==="cena")
 {
@@ -60,7 +95,7 @@ if(answer==="ilosc")
         }
     }
 }
-
+*/
 
 /*
 
@@ -75,10 +110,11 @@ if(answer==="ilosc")
 let telefon = new Phone;
 
  */
+/*
 telefon.user = 'Tomek';
 let telefony=[komora,telefon];
 alert(telefony[1].user);
-*/
+
 
 /*
 let warzywa = new Array(20);
