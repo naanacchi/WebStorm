@@ -1,14 +1,13 @@
 class DefaultPizza
 {
-    Cheese = 0;
+    Cheese = 0; //attribute
     Tuna = 0;
     Pineapple = 0;
     Price = 0;
     Kcal = 0;
 
-    Questioner = function()
+    Questioner = function() //methode, function
 {
-
     do {this.Cheese = +prompt(" How many % of cheese do you want? ");}
     while (this.Cheese > 100 || this.Cheese < 0)
     do {this.Tuna = +prompt(" How many % of tuna do you want? ");}
@@ -16,7 +15,6 @@ class DefaultPizza
     do {this.Pineapple = +prompt(" How many % of pineapple do you want? ");}
     while (this.Pineapple > 100 || this.Pineapple < 0)
 }
-
     Calc = function()
 {
     Pizza.Questioner();
@@ -29,6 +27,7 @@ class DefaultPizza
     Pizza.Calc();
     document.write(`You have choosen ${this.Cheese}% of cheese, ${this.Tuna}% of tuna, ${this.Pineapple}% of pinepple. The final price is ${this.Price} PLN<br>`);
     document.write(`Your pizza have ${this.Kcal} Kcal <br>`);
+    //this.kcal etc, is a variable (zmienna)
 }
 
 }
@@ -36,7 +35,7 @@ const Pizza = new DefaultPizza()
 const CheesePrice = .04;
 const TunaPrice = .04;
 const PineapplePrice = .02;
-const CheeseKcal = 712;
-const TunaKcal = 218;
-const PineappleKcal = 50;
+const CheeseKcal = 32;
+const TunaKcal = 18;
+const PineappleKcal = 15;
 Pizza.Display();
